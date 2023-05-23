@@ -18,25 +18,27 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex:1,
-          child: Image(
-            width: 200.0,
-            image: AssetImage(
-                'images/dice1.png'), //make sure the image does not overflow dice 1
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 1,
+            child: Image(
+              width: 200.0,
+              image: AssetImage(
+                  'images/dice1.png'), //make sure the image does not overflow dice 1
+            ),
           ),
-        ),
-        Expanded(
-          flex: 1,
-          child: Image(
-            width: 200.0,
-            image: AssetImage(
-                'images/dice2.png'), // shortcut for this widgetImage.asset('images/dice2.png'),
-          ),       
-        ),
-      ],
+          Expanded(
+            flex: 1,
+            child: Image(
+              width: 200.0,
+              image: AssetImage(
+                  'images/dice2.png'), // shortcut for this widgetImage.asset('images/dice2.png'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
