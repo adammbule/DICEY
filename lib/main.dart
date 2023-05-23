@@ -33,8 +33,8 @@ class DicePage extends StatelessWidget {
           child: Image(
             width: 200.0,
             image: AssetImage(
-                'images/dice1.png'), //dice 2
-          ),
+                'images/dice2.png'), // shortcut for this widgetImage.asset('images/dice2.png'),
+          ),       
         ),
       ],
     );
