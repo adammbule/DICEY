@@ -16,6 +16,9 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+
+  var leftDiceNumber = 1;
+  var rightDiceNumber= 2;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,7 +32,7 @@ class DicePage extends StatelessWidget {
               child: Image(              
               width: 200.0,
               image: AssetImage(
-                  'images/dice1.png'), //make sure the image does not overflow dice 1
+                  'images/dice$leftDiceNumber.png'), //make sure the image does not overflow dice 1
             ),
             ),
             flex: 1,
@@ -38,15 +41,15 @@ class DicePage extends StatelessWidget {
           Expanded(
             child: FloatingActionButton(
               onPressed: (){
-                  print('Right dice rolled');
+                  print('Right dice rolled');//do something
               }, //required property when using a button widget. void callback/anonymous function
               child: Image(
               width: 200.0,
               image: AssetImage(
-                  'images/dice2.png'), // shortcut for this widgetImage.asset('images/dice2.png'),
+                  'images/dice$rightDiceNumber.png'), // shortcut for this widgetImage.asset('images/dice2.png'),
             ), 
             ),
-            flex: 1,
+            flex: 1,//default is 1
             
           ),
         ],
