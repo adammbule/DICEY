@@ -31,7 +31,7 @@ class DicePage extends StatelessWidget {
               },             
               child: Image(              
               width: 200.0,
-              image: AssetImage(
+              image: AssetImage(//use string interpolation to insert the dice number.
                   'images/dice$leftDiceNumber.png'), //make sure the image does not overflow dice 1
             ),
             ),
