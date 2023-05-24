@@ -32,7 +32,10 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: FloatingActionButton( 
               onPressed: (){
-                print('Left dice rolled');
+                setState(() {
+                  leftDiceNumber = 4;
+                });
+                
               },             
               child: Image(              
               width: 200.0,
@@ -46,6 +49,9 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: FloatingActionButton(
               onPressed: (){
+                setState(() {
+                  rightDiceNumber= 5;
+                });
                   print('Right dice rolled');//do something
               }, //required property when using a button widget. void callback/anonymous function
               child: Image(
