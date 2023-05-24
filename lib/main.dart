@@ -15,10 +15,15 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+    @override
+  State<DicePage> createState() => _DicePageState();
+}
 
-  var leftDiceNumber = 1;
-  var rightDiceNumber= 2;
+class _DicePageState extends State<DicePage> {
+
+  int leftDiceNumber = 1;
+  int rightDiceNumber= 2;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -57,3 +62,9 @@ class DicePage extends StatelessWidget {
     );
   }
 }
+
+// Functions refresher-- dart is a statically typed language JS is a dynamically typed language
+/* void main(){
+ var myName = 'Adam';
+ print(myName);
+}*/
