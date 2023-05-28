@@ -34,7 +34,7 @@ class _DicePageState extends State<DicePage> {
             child: FloatingActionButton( 
               onPressed: (){
                 setState(() {
-                  leftDiceNumber = 4;
+                  leftDiceNumber = Random().nextInt(6) + 1;//Random number generator The +1 is to prevent empty image=0
                 });
                 
               },             
