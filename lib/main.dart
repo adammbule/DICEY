@@ -51,7 +51,7 @@ class _DicePageState extends State<DicePage> {
             child: FloatingActionButton(
               onPressed: (){
                 setState(() {
-                  rightDiceNumber= 5;
+                  rightDiceNumber= Random().nextInt(6) + 1;
                 });
                   print('Right dice rolled');//do something
               }, //required property when using a button widget. void callback/anonymous function
