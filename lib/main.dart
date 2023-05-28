@@ -16,6 +16,8 @@ void main() {
   );
 }
 
+
+
 class DicePage extends StatefulWidget {
     @override
   State<DicePage> createState() => _DicePageState();
@@ -25,6 +27,11 @@ class _DicePageState extends State<DicePage> {
 
   int leftDiceNumber = 1;
   int rightDiceNumber= 2;
+
+  void changeDiceNumber(){
+  leftDiceNumber = Random().nextInt(6) + 1; //function for randomizing the dice numbers
+  rightDiceNumber= Random().nextInt(6) + 1;
+}
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -34,7 +41,7 @@ class _DicePageState extends State<DicePage> {
             child: FloatingActionButton( 
               onPressed: (){
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;//Random number generator The +1 is to prevent empty image=0
+                 changeDiceNumber();//Random number generator The +1 is to prevent empty image=0
                 });
                 
               },             
@@ -51,7 +58,7 @@ class _DicePageState extends State<DicePage> {
             child: FloatingActionButton(
               onPressed: (){
                 setState(() {
-                  rightDiceNumber= Random().nextInt(6) + 1;
+                  changeDiceNumber();
                 });
                   print('Right dice rolled');//do something
               }, //required property when using a button widget. void callback/anonymous function
